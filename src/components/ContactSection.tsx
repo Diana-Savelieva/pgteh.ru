@@ -1,9 +1,9 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, Building } from "lucide-react";
+import fsiLogo from "@/assets/fsi-logo.png";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -199,7 +199,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-slate-700 text-2xl text-center mb-4">ООО "Прогресс ГеоТех"</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                   <div className="flex flex-col items-center space-y-2">
                     <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -233,6 +233,18 @@ const ContactSection = () => {
                         <p>КПП: 773301001</p>
                       </div>
                     </div>
+                  </div>
+                </div>
+
+                {/* FSI Support Section */}
+                <div className="pt-6 border-t border-slate-200">
+                  <div className="flex flex-col items-center gap-3">
+                    <p className="text-slate-500 text-sm">Проект при поддержке</p>
+                    <img 
+                      src={fsiLogo} 
+                      alt="Фонд содействия инновациям" 
+                      className="h-14 object-contain"
+                    />
                   </div>
                 </div>
               </CardContent>
